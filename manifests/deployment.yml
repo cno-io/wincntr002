@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "myakscluster002-6e00"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "myakscluster002-6e00"
+    spec:
+      containers:
+        - name: "myakscluster002-6e00"
+          image: "cactuar.azurecr.io/myakscluster002"
+          ports:
+          - containerPort: 80
